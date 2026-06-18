@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+
+@theme{
+  --color-blue-gray-900:#0F172A;
+  --color-primary:#fff;
+  --color-secondary:#9333EA;
+  --color-blue-gray-600:#475569;
+  /*fonts */
+
+  --font-Roboto:"Roboto";
+
+
+  /*font sizes*/
+
+  --text-btnText:20px;
+  --text-primaryText:16px;
+  --text-alternativeText:18px;
+
+  --text-h1Size:72px;
+  --text-h2Size:56px;
+
+}
+
+
+@layer base{
+  *,*::before, *::after{
+    @apply box-border m-0 p-0;
+  }
+  body{
+    @apply block w-full h-screen text-primary overflow-x-hidden font-Roboto text-primaryText bg-blue-gray-900 scroll-smooth;
+  }
+
+}
+
+@layer components{
+  .btnText{
+    @apply text-center text-primaryText font-medium leading-6 tracking-wider;
+  }
+  .btnTextSecondary{
+    @apply text-center text-btnText font-medium leading-6 tracking-wider;
+  }
+  .textHeader{
+    @apply text-primaryText leading-6 font-medium tracking-wide;
+  }
+
+  .textH1{
+    @apply text-h1Size font-extrabold leading-[110%];
+  }
+  .flexCenter{
+    @apply flex justify-center items-center;
+  }
+   .textH2{
+    @apply text-h2Size font-extrabold leading-[110%];
+  }
+  .flexBetween{
+    @apply flex justify-between items-center;
+  }
+}
